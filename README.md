@@ -1,6 +1,7 @@
 # RaspberryPiAP
 
 This bash file is going to setup Access Point for raspberry pi
+##
 The default SSID and psk:
 *SSID `RaspAP`
 *PSK `raspberrry`
