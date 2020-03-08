@@ -22,7 +22,7 @@ $sudo apt-get install git
 $git clone https://github.com/cmftom/RaspberryPiAP
 $cd RaspberryPiAP
 $chmod +x AP.sh
-$./AP.sh
+$sudo ./AP.sh
 ```
 ## Reboot the Raspberry Pi and check the wifi SSID is shown on the list
 ```sh
