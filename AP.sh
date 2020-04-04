@@ -13,7 +13,7 @@ sudo apt -y install dnsmasq hostapd
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 
-#Config the static IP for wifi and eth
+#Config the static IP for wifi
 #sudo nano /etc/dhcpcd.conf
 echo "interface wlan0" >> /etc/dhcpcd.conf
 echo "    static ip_address=192.168.2.1/24" >> /etc/dhcpcd.conf
@@ -21,11 +21,12 @@ echo "    netmask 255.255.255.0" >> /etc/dhcpcd.conf
 echo "    gateway 0.0.0.0" >> /etc/dhcpcd.conf
 echo "    nohook wpa_supplicant" >> /etc/dhcpcd.conf
 
-echo "interface eth0" >> /etc/dhcpcd.conf
-echo "    static ip_address=192.168.2.1/24" >> /etc/dhcpcd.conf
-echo "    netmask 255.255.255.0" >> /etc/dhcpcd.conf
-echo "    gateway 0.0.0.0" >> /etc/dhcpcd.conf
-echo "    nohook wpa_supplicant" >> /etc/dhcpcd.conf
+#the Eth static ip config
+#echo "interface eth0" >> /etc/dhcpcd.conf
+#echo "    static ip_address=192.168.2.1/24" >> /etc/dhcpcd.conf
+#echo "    netmask 255.255.255.0" >> /etc/dhcpcd.conf
+#echo "    gateway 0.0.0.0" >> /etc/dhcpcd.conf
+#echo "    nohook wpa_supplicant" >> /etc/dhcpcd.conf
 
 #Restart the server
 sudo /etc/init.d/dnsmasq restart
